@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fallback originale per locandine mancanti: ciak stilizzato. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp" android:height="300dp"
+    android:viewportWidth="200" android:viewportHeight="300">
+    <path android:fillColor="#10182A" android:pathData="M0,0h200v300h-200z" />
+    <path android:fillColor="#17223A" android:pathData="M50,130h100v70h-100z" />
+    <path android:fillColor="#2A3858" android:pathData="M50,112l96,-16l4,16l-96,16z" />
+    <path android:fillColor="#10182A" android:pathData="M66,106l10,-2l-6,18l-10,2z M90,102l10,-2l-6,18l-10,2z M114,98l10,-2l-6,18l-10,2z" />
+    <path android:fillColor="#2A3858" android:pathData="M62,148h76v6h-76z M62,164h52v6h-52z" />
+</vector>

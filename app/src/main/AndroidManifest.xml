@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Unico permesso necessario: rete per TMDb e immagini. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- App per TV, ma installabile anche su dispositivi senza leanback/touch. -->
+    <uses-feature android:name="android.software.leanback" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+
+    <!--
+      Package visibility (Android 11+): dichiariamo SOLO i package candidati dei servizi
+      e le categorie di avvio, per sapere se un'app è installata e poterla aprire.
+      Nessuna enumerazione indiscriminata: vedi docs/INTEGRAZIONI.md.
+    -->
+    <queries>
+        <package android:name="com.netflix.ninja" />
+        <package android:name="com.netflix.mediaclient" />
+        <package android:name="com.amazon.amazonvideo.livingroom" />
+        <package android:name="com.amazon.firebat" />
+        <package android:name="com.amazon.avod.thirdpartyclient" />
+        <package android:name="com.disney.disneyplus" />
+        <package android:name="com.apple.atve.androidtv.appletv" />
+        <package android:name="com.apple.atve.amazon.appletv" />
+        <package android:name="com.cbs.ott" />
+        <package android:name="com.dazn" />
+        <package android:name="com.google.android.youtube.tv" />
+        <package android:name="com.amazon.firetv.youtube" />
+        <package android:name="com.google.android.youtube" />
+        <package android:name="com.android.vending" />
+        <package android:name="com.amazon.venezia" />
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+        <intent>
+            <action android:name="android.speech.action.RECOGNIZE_SPEECH" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".StreamHubApp"
+        android:allowBackup="false"
+        android:banner="@drawable/streamhub_banner"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.StreamHub.Splash">
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sh_background">#070B16</color>
+    <color name="sh_surface">#10182A</color>
+    <color name="sh_surface_elevated">#17223A</color>
+    <color name="sh_primary">#00D9FF</color>
+    <color name="sh_secondary">#7957FF</color>
+    <color name="sh_text_primary">#F5F7FF</color>
+    <color name="sh_text_secondary">#9CA9C2</color>
+    <color name="sh_error">#FF5263</color>
+    <color name="sh_success">#59E3A5</color>
+</resources>
